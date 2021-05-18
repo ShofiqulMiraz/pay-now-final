@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Shipping Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="payment">
+            <div class="payment-logo">
+                <p>p</p>
+            </div>
+
+
+            <h2>Courier Requirement</h2>
+
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="mailid">Mail Id:</label>
+                    <input type="email" placeholder="Enter Valid Email" id="mailid" required />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="mobilenumber">Mobile Number:</label>
+                    <input type="number" placeholder="Mobile Number" id="mobilenumber" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="productcode">Product Code:</label>
+                    <input type="number" placeholder="Valid Product Code" id="productcode" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+
+                <button> Next Step</button>
+
+                <div class='processing_form'>
+                    <div class="content">
+                        <div class="loader"></div>
+                        <p>Almost There, Please Wait....</p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="shipping.js"></script>
+</body>
+
+</html>
