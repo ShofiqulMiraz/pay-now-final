@@ -20,6 +20,34 @@
 
             <h2>Payment Details</h2>
 
+            <div class="accepted-cards">
+                <fieldset>
+                    <legend>We accept following payment methods</legend>
+                    <div class="card-container">
+                        <div>
+                            <img src="visa.jpg" alt="visa" class='visa-img'>
+                            <p>visa</p>
+                        </div>
+                        <div>
+                            <img src="mastercard.png" alt="mastercard" class='mastercard-img'>
+                            <p>mastercard</p>
+                        </div>
+                        <div>
+                            <img src="american-express.png" alt="american-express" class='american-express-img'>
+                            <p>a-express</p>
+                        </div>
+                        <div>
+                            <img src="union-pay.png" alt="union-pay" class='union-pay-img'>
+                            <p>union-pay</p>
+                        </div>
+                        <div>
+                            <img src="ucb.png" alt="ucb" class='ucb-img'>
+                            <p>ucb</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
             <form id="form" class="form">
                 <div class="form-control">
                     <label for="cardholdername">Card holder:</label>
@@ -30,7 +58,8 @@
                 </div>
                 <div class="form-control">
                     <label for="cardnumber">Card Number:</label>
-                    <input type="number" placeholder="Valid Card Number" id="cardnumber" />
+                    <input type="number" placeholder="Valid Card Number" id="cardnumber" pattern="/^-?\d+\.?\d*$/"
+                        onKeyPress="if(this.value.length==16) return false" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
@@ -45,7 +74,8 @@
                     </div>
                     <div class="form-control">
                         <label for="cvv">CVV:</label>
-                        <input type="number" placeholder="000" id="cvv" />
+                        <input type="number" placeholder="000" id="cvv" pattern="/^-?\d+\.?\d*$/"
+                            onKeyPress="if(this.value.length==3) return false" />
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small class='cvvsmall'>Error message</small>
